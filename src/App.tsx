@@ -135,6 +135,8 @@ function App() {
   const displayCuaca = document.querySelector(".deskripsi-cuaca");
   const celcius = document.querySelector(".celcius");
 
+  const date = new Date();
+
   const formattedDate = date.toLocaleDateString("id-ID", {
     weekday: "long",
     day: "numeric",
@@ -183,7 +185,6 @@ function App() {
     "Desember",
   ];
 
-  const date = new Date();
   class Cuaca {
     protected dataArray: string[];
 
@@ -230,7 +231,6 @@ function App() {
       console.log(this.dataArray);
     }
   }
-
 
   function searchInArrays(target, arrays) {
     for (let array of arrays) {
